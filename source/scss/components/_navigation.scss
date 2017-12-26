@@ -1,0 +1,151 @@
+/* semantic overides */
+
+.ui.secondary {
+  &.menu {
+    a.item {
+      &:hover {
+        color: $yellow !important;
+      }
+    }
+    a.active {
+      color: $yellow !important;
+    }
+  }
+}
+
+.c-navbar {
+  border-radius: 0;
+  margin-bottom: 0;
+  &-inverse {
+    background-color: transparent;
+  }
+  &-brand {
+    width: 50px;
+    height: 54px;
+    display: inline-block;
+    position: absolute;
+    @include text-indent;
+  }
+
+  /* navigation */
+
+  .c-navigation {
+    display: block;
+    width: 100%;
+    &-top {
+      &__list {
+        display: inline-block;
+        list-style: none;
+        margin-left: 2px;
+        margin-right: 2px;
+        padding: 0;
+        .item {
+          text-decoration: none;
+          color: $white;
+          font-size: 1rem;
+          font-weight: 100;
+          text-transform: uppercase;
+          width: 100px;
+          display: block!important;
+          text-align: center !important;
+          padding: 16px 10px 20px !important;
+          border-top: 4px solid rgba(0,0,0,0);
+          @include secondary-font;
+          @include hover-transition;
+          &:hover {
+            color: $brand !important;
+            background: darken($brand, 50%) !important;
+          }
+          &.active {
+            background: transparent!important;
+            border-top-color: $brand;
+            color: $yellow !important;
+          }
+        }
+      }
+    }
+
+    /* internal navigation */
+    &-internal {
+      display: inline-block;
+      list-style: none;
+      width: 50%;
+      margin-left: 0;
+      padding-left: 50px;
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    /* external navigation */
+    &-external {
+      float: right;
+      position: absolute;
+      top: 0;
+      width: 50%;
+      display: inline-block;
+      margin-left: 0;
+      padding-left: 0;
+      margin-top: 0;
+      margin-bottom: 0;
+      right: 0;
+      text-align: right;
+      list-style: none;
+      .c-social-nav {
+        &__item {
+          display: inline-block;
+          list-style: none;
+          height: 25px;
+          width: 24px;
+          background: url('../assets/img/icons/sprite-wh.png');
+          background-size: 90px;
+          background-position: 0 0;
+          background-repeat: no-repeat;
+          margin-left: 15px;
+          @include hover-transition;
+          // @include text-indent;
+        }
+        &__link {
+          display: inline-block;
+          height: 100%;
+          width: 100%;
+          @include text-indent;
+        }
+        &--instagram {
+          width: 22px;
+          background-size: 223px;
+          background-position: top left -43px;
+        }
+        &--pinterest {
+          width: 19px;
+          background-size: 215px;
+          background-position: top left -67px;
+        }
+        &--natgeo {
+          background-size: 178px;
+          width: 66px;
+          background-position: top -50px left;
+        }
+        &--creativeMarket {
+          width: 61px;
+          background-size: 217px;
+          background-position: left -97px top;
+        }
+        &--inprnt {
+          background-size: 191px;
+          width: 44px;
+          background-position: top left -146px;
+        }
+        &--shutterstock {
+          background-size: 153px;
+          width: 74px;
+          background-position: top -19px left -29px;
+        }
+        &--zazzle {
+          width: 20px;
+          background-size: 148px;
+          background-position: left -109px top -18px;
+        }
+      }
+    }
+  }
+}

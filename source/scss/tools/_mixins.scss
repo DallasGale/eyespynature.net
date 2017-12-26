@@ -1,0 +1,14 @@
+@mixin hover-transition {
+    transition: all 0.2s;
+    &:hover {
+        transition: all 0.2s;
+    }
+}
+
+@mixin text-indent {
+  text-indent: 10000px;
+}
+
+@mixin no-box-shadow {
+  box-shadow: none;
+}

@@ -1,0 +1,246 @@
+// semantic overides
+.ui.basic.modal>.content {
+  background: none;
+}
+
+.banner {
+  display: none;
+}
+
+.c-modal {
+  &-products {
+    display: block;
+    color: $black;
+    &__heading {
+      color: $black;
+      font-size: 2rem;
+    }
+    &__reference {
+      font-size: 0.7rem;
+      @include secondary-font;
+      font-weight:100;
+      color: $grey--medium;
+    }
+    &__link {
+      text-decoration: none;
+      min-height: 100px;
+      display: block;
+      width: 100%;
+    }
+    &-wrap {
+      &__icon {
+        display: block;
+        margin: 0 auto;
+        height: 60px;
+        background: url('../assets/img/icons/sprite.png') no-repeat;
+        //black
+        &--print {
+          background-position: left 0px top -268px;
+          width: 54px;
+        }
+        &--stock {
+          background-position: top -271px left -152px;
+          width: 63px;
+        }
+        &--giftcards {
+          background-position: top -271px left -63px;
+          width: 40px;
+        }
+        &--bags {
+          background-position: top -268px left -228px;
+          width: 40px;
+        }
+        &--cases {
+          background-position: top -271px left -112px;
+          width: 33px;
+        }
+
+        //white
+        // &--print {
+        //   background-position: left 2px top -183px;
+        //   width: 54px;
+        // }
+        // &--stock {
+        //   background-position: top -181px left -136px;
+        //   width: 63px;
+        // }
+        // &--giftcards {
+        //   background-position: top -182px left -54px;
+        //   width: 40px;
+        // }
+        // &--bags {
+        //   background-position: top -178px left -208px;
+        //   width: 40px;
+        // }
+        // &--cases {
+        //   background-position: top -182px left -99px;
+        //   width: 33px;
+        // }
+      }
+      &__title {
+        margin-top: 10px;
+        font-weight: 100;
+        font-weight: 700;
+        min-height:40px;
+        height: auto !important;
+        height: 40px;
+        font-size: 11px;
+        text-transform: uppercase;
+        color: $brand;
+        text-align: center;
+        @include secondary-font;
+      }
+      &__logo {
+        padding: 10px;
+        position: relative;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        height: 36px;
+        background: url('../assets/img/icons/sprite.png') no-repeat;
+        // black
+
+        &--inprnt {
+          background-position: top -153px left -259px;
+          width: 64px;
+        }
+        &--shutter {
+          background-position: top -124px left -41px;
+          width: 104px;
+          background-size: 329px !important;
+        }
+        &--cMarket {
+          background-position: top -151px left -145px;
+          width: 89px;
+        }
+        &--zazzle {
+          background-position: top -247px left -143px;
+          width: 96px;
+        }
+
+        //white
+        // &--inprnt {
+        //   background-position: top -2px left -259px;
+        //   width: 64px;
+        // }
+        // &--shutter {
+        //   background-position: top -25px left -43px;
+        //   width: 104px;
+        //   background-size: 329px !important;
+        // }
+        // &--cMarket {
+        //   background-position: top -2px left -145px;
+        //   width: 89px;
+        // }
+        // &--zazzle {
+        //   background-position: top -93px left -143px;
+        //   width: 96px;
+        // }
+      }
+    }
+  }
+  &-esnLogo {
+    width: 100%;
+    padding: 0 10px;
+  }
+  &-imageDetails {
+    width: 100%;
+    display: block;
+    @include secondary-font;
+    &__list {
+      list-style: none;
+      padding-top: 0;
+      padding-bottom: 0;
+      margin-top: 0;
+      padding-left: 0;
+      color: $black;
+    }
+    &__thumb {
+      border: 10px solid $white;
+      box-shadow: 0 12px 44px -20px rgba(0,0,0,.75);
+      width: 100%;
+      margin-bottom: 30px;
+    }
+    &__title {
+      color: $grey--dark;
+      font-weight:400;
+      text-transform: uppercase;
+      @include secondary-font;
+      @include font-size--sm;
+      &--spec {
+        color: $grey--medium;
+        font-weight:400;
+        @include font-size--xs;
+        @include arial
+      }
+    }
+  }
+}
+
+.ui {
+  &.segment {
+    background: none;
+    border: 2px solid rgba(255, 255, 255, 1);
+    @include hover-transition;
+    &:hover {
+      box-shadow: 0px 2px 18px -4px rgba(0,0,0,0.35);
+      // background-color: $brand;
+      // .c-modal-products-wrap__title {
+      //   color: $white;
+      // }
+    }
+  }
+}
+
+
+// un-available banner
+.c-modal-products__notAvailable {
+  .banner {
+    display: block;
+    transform: rotate(15deg);
+    background-color: $cta--red;
+    color: $white;
+    position: absolute;
+    margin: 0 auto;
+    width: 100px;
+    left: 0;
+    opacity: 1;
+    z-index: 1;
+    right: 0;
+    height: auto;
+    padding: 4px 0 4px;
+    text-align: center;
+    border-radius: 20px;
+  }
+  .c-modal-products-wrap__icon,
+  .c-modal-products-wrap__logo,
+  .c-modal-products-wrap__title {
+    opacity:0.2;
+  }
+  .ui {
+    &.segment {
+      @include no-box-shadow;
+      border-color: rgba(255,255,255,0.4);
+      &:hover {
+        background-color: transparent;
+        @include no-box-shadow;
+        .modal-products-wrap__title {
+          color: $brand;
+        }
+      }
+    }
+  }
+}
+
+// .ui {
+//   &.dimmer {
+//     background-color: rgba(255, 255, 255, 0.88);
+//     .modal {
+//       box-shadow: 0 12px 44px -20px rgba(0,0,0,.75) !important;
+//       background: white;
+//       margin-bottom: 10px;
+//       border-radius: 6px;
+//       padding: 20px;
+//     }
+//   }
+// }

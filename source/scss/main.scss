@@ -1,0 +1,29 @@
+//ITCSS
+// 1. settings 's-'
+@import 'settings/colors';
+@import 'settings/typography';
+// 2. tools 't-'
+@import 'tools/mixins';
+@import 'tools/breakpoints';
+// 3. generic 'g-'
+@import 'generic/normalize';
+// 4. elements 'e-'
+@import 'elements/body';
+@import 'elements/typography';
+@import 'elements/buttons';
+// 5. objects 'o-'
+@import 'objects/layout';
+// 6 components 'c-'
+@import 'components/footer';
+@import 'components/gallery';
+@import 'components/header';
+@import 'components/modal';
+@import 'components/navigation';
+@import 'components/search';
+@import 'components/heroSlider';
+// 7. utilities 'u-'
+@import 'utilities/_padding';
+@import 'utilities/_visibility';
+
+// 8. theme 't-''
+@import 'theme/inverse';

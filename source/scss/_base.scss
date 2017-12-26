@@ -1,0 +1,15 @@
+body {
+  @include primary-font;
+  font-size: 1rem;
+  color: $font-color--dark;
+  background-color: $background--light;
+  padding: 0;
+}
+
+h1, h2, h3 {
+  @include special-font;
+}
+
+button {
+  @include secondary-font;
+}

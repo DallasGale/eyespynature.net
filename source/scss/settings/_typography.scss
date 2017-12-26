@@ -1,0 +1,30 @@
+@mixin primary-font {
+  font-family: "program",sans-serif;
+}
+@mixin secondary-font {
+  font-family: "clone-rounded-latin",sans-serif;
+}
+@mixin special-font {
+  font-family: "broadsheet",serif;
+}
+
+@mixin arial {
+  font-family: "Arial",sans-serif;
+}
+
+// font sizing
+@mixin font-size--xs {
+  font-size: 0.7rem;
+}
+@mixin font-size--sm {
+  font-size: 0.9rem;
+}
+@mixin font-size--md {
+  font-size: 1.1rem;
+}
+@mixin font-size--lg {
+  font-size: 24px;
+}
+@mixin font-size--xl {
+  font-size: 32px;
+}

@@ -1,0 +1,16 @@
+.alternative {
+  .page {
+    background-color: #232323;
+  }
+  .ui.button.cta-primary {
+    color: white;
+    border-color: white;
+  }
+  .header {
+    background-color: white;
+    color: black;
+    .ui.secondary.inverted.menu a.item {
+      color: black !important;
+    }
+  }
+}

@@ -1,0 +1,51 @@
+button {
+  @include secondary-font;
+}
+// semantic overrides
+.ui.button {
+  &.cta {
+    &-primary {
+      padding: 12px 40px;
+      margin: 0 auto;
+      display: block;
+      position: relative;
+      border: 1px solid $yellow;
+      font-weight: 100;
+      width: auto;
+      background: none;
+      color: $yellow;
+      text-align: center;
+      border-radius: 0;
+      text-transform: lowercase;
+      @include font-size--sm;
+      @include hover-transition;
+      @include secondary-font;
+      &:hover {
+        text-decoration: none;
+        background: $yellow;
+        border-color: $yellow;
+        color: $white;
+      }
+    }
+    &-gallery {
+      display: inline-block;
+      text-transform: uppercase;
+      font-weight: 700;
+      padding: 10px 20px;
+      letter-spacing: 1.5px;
+      width: auto;
+      font-size: 1.1rem;
+      &:hover {
+        text-decoration: none;
+        background-color: $yellow;
+        color: $white;
+      }
+      .active {
+        text-decoration: none;
+        background-color: $white;
+        border-color: $white;
+        color: $black;
+      }
+    }
+  }
+}
